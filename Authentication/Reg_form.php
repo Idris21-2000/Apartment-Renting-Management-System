@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reg-form.css">
     <title>Registration</title>
 </head>
+
 <body>
     <div class="navbar">
         <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="">Guest-view</a></li>
             <li><a href="">About us</a></li>
         </ul>
-    </div> 
+    </div>
     <br><br>
     <div class="reg-form">
-        <form action="../DB-Includes/formhandler.inc.php" method="post">
+        <form action="../includes/formhandler.inc.php" method="post">
             <h1>Registration</h1>
             <hr><br>
             <br>
@@ -25,17 +27,18 @@
             <br><br>
             <input type="text" name="username" placeholder="User-name">
             <input type="email" name="email" placeholder="E-mail">
-            <br/><br>
+            <br /><br>
             <input type="password" name="pwd" placeholder="Password">
             <input type="password" name="conf_pwd" placeholder="Confirm password">
-            <br/><br>
+            <br /><br>
             <input type="tel" name="phone" placeholder="Phone number">
             <input type="address" name="address" placeholder="Physical address">
             <br><br><br>
             <button type="submit">Register</button>
             <br><br>
-            <p><span>You have an account already? login here</span> <a href="">Login</a></p>     
+            <p><span>You have an account already? login here</span> <a href="./Login.php">Login</a></p>
         </form>
     </div>
 </body>
+
 </html>

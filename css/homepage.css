@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    background-image: url(../assets/images/Apartment2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav{
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 90.9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: rgb(13, 13, 12);
+    text-align: center;
+}
+nav{
+    background: rgb(234, 194, 146);
+    border: solid;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: #1b0c0c;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 11px 35px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+
+nav ul li::after{
+    content: '';
+    background: #1b0c0c;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+}
+
+ nav ul li:hover{
+    color: #fff;
+}
+  nav ul li a:hover{
+    color: #fff;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #777;
+}
+
+ nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
