@@ -24,6 +24,7 @@
 h1{
     color: rgb(13, 13, 12);
     text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);;
 }
 nav{
     background: rgb(234, 194, 146);

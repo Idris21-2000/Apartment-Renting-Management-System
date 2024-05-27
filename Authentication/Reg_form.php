@@ -1,3 +1,7 @@
+<?php
+require_once "../includes/config_session.inc.php";
+require_once "../includes/views/reg_view.inc.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reg-form.css">
+    <link rel="stylesheet" href="../css/message.css">
     <title>Registration</title>
 </head>
 
@@ -18,7 +23,7 @@
     </div>
     <br><br>
     <div class="reg-form">
-        <form action="../includes/formhandler.inc.php" method="post">
+        <form action="../includes/registration.inc.php" method="post">
             <h1>Registration</h1>
             <hr><br>
             <br>
@@ -33,12 +38,17 @@
             <br /><br>
             <input type="tel" name="phone" placeholder="Phone number">
             <input type="address" name="address" placeholder="Physical address">
-            <br><br><br>
-            <button type="submit">Register</button>
             <br><br>
+            <?php
+            display_errors()
+            ?>
+            <button type="submit">Register</button><br>
+            <br>
             <p><span>You have an account already? login here</span> <a href="./Login.php">Login</a></p>
         </form>
     </div>
+
+
 </body>
 
 </html>

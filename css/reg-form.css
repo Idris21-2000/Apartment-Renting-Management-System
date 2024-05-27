@@ -31,10 +31,14 @@ form{
 }
 
 .navbar{
-    padding: 14px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
     background-color:rgb(81, 228, 81);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    position: fixed;
 }
 
 .navbar ul{

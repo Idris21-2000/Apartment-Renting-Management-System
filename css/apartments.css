@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+div .image {
+  width: 22.5%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+div .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ap-button{
+  display: flex;
+  justify-content: center;
+}
+
+.ap-button button{
+  width: 99%;
+  height: 40px;
+}
+
+.ap-button button:hover{
+  cursor: pointer;
+}
+
+.attchment{
+  display: flex;
+}
