@@ -16,3 +16,18 @@ function get_user(object $pdo, string $username)
 
     return $result;
 }
+
+function user_password(object $pdo, string $username)
+{
+    $query = 'SELECT pwd FROM customer WHERE username = :username;';
+
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(':username', $username);
+
+    $stmt->execute();
+
+    $fetched_pwd = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $fetched_pwd;
+}

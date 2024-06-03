@@ -16,6 +16,17 @@ function display_errors()
         unset($_SESSION["login_errors"]);
     } elseif (isset($_GET['login']) && $_GET['login'] === "success") {
         echo '<br>';
-        echo '<p class="class="error_message">Login Successfully</p>';
+        echo '<p class="success_message">Login Successfully!</p>';
+    }
+}
+
+function user_view()
+{
+    if (!isset($_SESSION['user_id'])) {
+        echo "<br>";
+        echo '<h1>' . 'Welcome dear ' . $_SESSION['name'] . '</h1>';
+    } else {
+        header('Location:../Authentication/Login.php');
+        echo '<h1>You are not logged in</h1>';
     }
 }

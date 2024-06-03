@@ -39,17 +39,17 @@ if (isset($_SESSION['user_id'])) {
 function regenerate_session_id()
 {
     session_regenerate_id(true);
-
-    $userId = $_SESSION['user_id'];
-    $new_session = session_create_id();
-    $sessionId = $new_session . '_' . $userId;
-    session_id($sessionId);
-
     $_SESSION["last_regeneration"] = time();
 }
 
 function regenerate_session_id_loggedin()
 {
     session_regenerate_id(true);
+
+    $userId = $_SESSION['user_id'];
+    $new_session = session_create_id();
+    $sessionId = $new_session . '_' . $userId;
+    session_id($sessionId);
+
     $_SESSION["last_regeneration"] = time();
 }

@@ -24,9 +24,9 @@ function is_username_wrong(array|bool $result)
     }
 }
 
-function user_password_wrong(string $password, string $hashed_password)
+function user_password_wrong(string $password, string $fetched_pwd)
 {
-    if (!password_verify($password, $hashed_password)) {
+    if (!($password === $fetched_pwd)) {
         return true;
     } else {
         return false;

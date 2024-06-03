@@ -23,7 +23,7 @@ require_once '../includes/views/login_view.inc.php';
         </ul>
     </div>
     <br><br>
-    <br>
+    <br><br>
     <div class="form">
         <form action="../includes/login.inc.php" method="post">
             <br>

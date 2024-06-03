@@ -1,6 +1,6 @@
 <?php
 require_once "../includes/config_session.inc.php";
-require_once "../includes/views/reg_view.inc.php";
+require_once "../includes/views/llReg_view.inc.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,22 +23,20 @@ require_once "../includes/views/reg_view.inc.php";
     </div>
     <br><br><br><br>
     <div class="reg-form">
-        <form action="../includes/registration.inc.php" method="post">
-            <h1>Tenant registration</h1>
+        <form action="../includes/landlordsReg.inc.php" method="post">
+            <br>
+            <h1>Landlord registration</h1>
             <hr><br>
             <br>
-            <input type="text" name="fname" placeholder="First name">
-            <input type="text" name="lname" placeholder="Last name">
-            <br><br>
+            <input type="text" name="fullname" placeholder="Your full name">
             <input type="text" name="username" placeholder="User-name">
-            <input type="email" name="email" placeholder="E-mail">
-            <br /><br>
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="conf_pwd" placeholder="Confirm password">
-            <br /><br>
-            <input type="tel" name="phone" placeholder="Phone number">
-            <input type="address" name="address" placeholder="Physical address">
             <br><br>
+            <input type="tel" name="phone" placeholder="Phone number">
+            <input type="text" name="apartment_name" placeholder="Apartment name">
+            <br /><br>
+            <input type="address" name="apartment_location" placeholder="Apartment located at">
+            <input type="password" name="pwd" placeholder="Password">
+            <br /><br>
             <?php
             display_errors()
             ?>

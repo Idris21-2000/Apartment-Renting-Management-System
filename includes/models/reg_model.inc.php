@@ -19,7 +19,7 @@ function get_username(object $pdo, string $username)
 
 function get_email(object $pdo, string $email)
 {
-    $query = 'SELECT username FROM customer WHERE email = :email;';
+    $query = 'SELECT email FROM customer WHERE email = :email;';
 
     $stmt = $pdo->prepare($query);
 
@@ -50,19 +50,19 @@ function send_regristration_data(
 
     $stmt = $pdo->prepare($query);
 
-    $options = [
-        'const' => 12
-    ];
+    // $options = [
+    //     'const' => 12
+    // ];
 
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
-    $hashed_confpassword = password_hash($conf_password, PASSWORD_BCRYPT, $options);
+    // $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
+    // $hashed_confpassword = password_hash($conf_password, PASSWORD_BCRYPT, $options);
 
     $stmt->bindParam(":firstname", $firstname);
     $stmt->bindParam(":lastname", $lastname);
     $stmt->bindParam(":username", $username);
     $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":password", $hashed_password);
-    $stmt->bindParam(":conf_password", $hashed_confpassword);
+    $stmt->bindParam(":password", $password);
+    $stmt->bindParam(":conf_password", $conf_password);
     $stmt->bindParam(":phone", $phone);
     $stmt->bindParam(":address", $address);
 

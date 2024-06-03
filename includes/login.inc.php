@@ -21,12 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         $result = get_user($pdo, $username);
+        $fetched_pwd = user_password($pdo, $username);
 
         if (is_username_wrong($result)) {
             $errors['login_incorrect'] = 'Incorrect login info!';
         }
 
-        if (!is_username_wrong($result) && user_password_wrong($password, $result["pwd"])) {
+        if (!is_username_wrong($result) && user_password_wrong($password, $fetched_pwd['pwd'])) {
             $errors['login_incorrect'] = "Wrong password entered!";
         }
 
@@ -44,10 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $_SESSION['user_id'] = $result["id"];
         $_SESSION['username'] = htmlspecialchars($result["username"]);
+        $_SESSION['name'] = htmlspecialchars($result["fname"]);
 
         $_SESSION['last_regeneration'] = time();
 
-        header('location:../Authentication/Login.php?login=sucess');
+        header('location:../Dashboard/tenant.dash.php');
         $stmt = null;
         $pdo = null;
 
