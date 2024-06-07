@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-function get_user(object $pdo, string $username)
+function get_users(object $pdo, string $username)
 {
-    $query = 'SELECT * FROM customer WHERE username = :username;';
+    $query = 'SELECT * FROM users WHERE username = :username;';
 
     $stmt = $pdo->prepare($query);
 
@@ -19,7 +19,7 @@ function get_user(object $pdo, string $username)
 
 function user_password(object $pdo, string $username)
 {
-    $query = 'SELECT pwd FROM customer WHERE username = :username;';
+    $query = 'SELECT pwd FROM users WHERE username = :username;';
 
     $stmt = $pdo->prepare($query);
 

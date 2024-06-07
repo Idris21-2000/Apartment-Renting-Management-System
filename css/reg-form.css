@@ -22,6 +22,27 @@ h1{
     padding: 8px 100px;
 }
 
+div .dropbox{
+    padding: 7px 80px;
+    opacity: 0.7;
+}
+
+div .divdrop{
+    display: flex;
+  justify-content: center;
+}
+
+div select option{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+div select option:hover{
+    color: black;
+    cursor: pointer;
+    background-color: rgb(81, 228, 81);
+}
+
 form{
     border: solid;
     padding: 30px;

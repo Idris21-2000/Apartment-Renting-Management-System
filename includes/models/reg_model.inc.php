@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 function get_username(object $pdo, string $username)
 {
-    $query = 'SELECT username FROM customer WHERE username = :username;';
+    $query = 'SELECT username FROM users WHERE username = :username;';
 
     $stmt = $pdo->prepare($query);
 
@@ -19,7 +19,7 @@ function get_username(object $pdo, string $username)
 
 function get_email(object $pdo, string $email)
 {
-    $query = 'SELECT email FROM customer WHERE email = :email;';
+    $query = 'SELECT email FROM users WHERE email = :email;';
 
     $stmt = $pdo->prepare($query);
 
@@ -41,12 +41,13 @@ function send_regristration_data(
     string $password,
     string $conf_password,
     string $phone,
-    string $address
+    string $address,
+    string $user_type
 ) {
-    $query = "INSERT INTO customer (fname, lname, username, email, pwd, 
-        conf_pwd, phone, address) 
+    $query = "INSERT INTO users (fname, lname, username, email, pwd, 
+        conf_pwd, phone, address, user_type) 
         VALUES (:firstname, :lastname, :username, :email, :password, 
-        :conf_password, :phone, :address);";
+        :conf_password, :phone, :address, :user_type);";
 
     $stmt = $pdo->prepare($query);
 
@@ -65,6 +66,7 @@ function send_regristration_data(
     $stmt->bindParam(":conf_password", $conf_password);
     $stmt->bindParam(":phone", $phone);
     $stmt->bindParam(":address", $address);
+    $stmt->bindParam(":user_type", $user_type);
 
     $stmt->execute();
 }

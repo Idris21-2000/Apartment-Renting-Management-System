@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
         if (!($fileError > 0)) {
             if ($fileSize < 5000000) {
                 require_once 'dbh.inc.php';
-                require_once 'models/upload.model.ic.php';
+                require_once "models/upload.model.inc.php";
                 //here it should be included the id of the user uploaded this later
                 $fileNameNew = uniqid('', true) . "." . $fileActExt;
                 $fileDestination = "../assets/uploads/" . $fileNameNew;

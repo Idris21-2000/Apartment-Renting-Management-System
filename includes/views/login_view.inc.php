@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 function display_errors()
 {
     if (isset($_SESSION["login_errors"])) {
@@ -20,13 +21,16 @@ function display_errors()
     }
 }
 
+function return_view()
+{
+    if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "admin") {
+        header('location:../Dashboard/admin.dash.php');
+    }
+}
+
 function user_view()
 {
-    if (!isset($_SESSION['user_id'])) {
-        echo "<br>";
+    if (isset($_SESSION['user_id'])) {
         echo '<h1>' . 'Welcome dear ' . $_SESSION['name'] . '</h1>';
-    } else {
-        header('Location:../Authentication/Login.php');
-        echo '<h1>You are not logged in</h1>';
     }
 }

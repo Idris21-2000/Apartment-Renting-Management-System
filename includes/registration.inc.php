@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $conf_password = $_POST["conf_pwd"];
     $phone = $_POST["phone"];
     $address = $_POST["address"];
+    $user_type = $_POST["user_type"];
 
     try {
         require_once "./dbh.inc.php";
@@ -28,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $password,
             $conf_password,
             $phone,
-            $address
+            $address,
+            $user_type
         )) {
             $errors['empty_input'] = 'Fill in all the fields!';
         }
@@ -78,7 +80,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $password,
             $conf_password,
             $phone,
-            $address
+            $address,
+            $user_type
         );
 
         header('Location:../Authentication/Reg_form.php?register=success');

@@ -10,11 +10,12 @@ function is_input_empty(
     string $password,
     string $conf_password,
     string $phone,
-    string $address
+    string $address,
+    string $user_type
 ) {
     if (
         empty($firstname || $lastname || $username || $email || $password
-            || $conf_password || $phone || $address)
+            || $conf_password || $phone || $address || $user_type)
     ) {
         return true;
     } else {
@@ -67,7 +68,8 @@ function create_user(
     string $password,
     string $conf_password,
     string $phone,
-    string $address
+    string $address,
+    string $user_type
 ) {
     send_regristration_data(
         $pdo,
@@ -78,6 +80,7 @@ function create_user(
         $password,
         $conf_password,
         $phone,
-        $address
+        $address,
+        $user_type
     );
 }
