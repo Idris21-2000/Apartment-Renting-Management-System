@@ -24,7 +24,7 @@ require_once "../includes/views/reg_view.inc.php";
   <br /><br /><br /><br />
   <div class="reg-form">
     <form action="../includes/registration.inc.php" method="post">
-      <h1>Tenant registration</h1>
+      <h1>User registration</h1>
       <hr />
       <br />
       <br />

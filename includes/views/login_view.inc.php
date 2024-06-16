@@ -25,6 +25,12 @@ function return_view()
 {
     if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "admin") {
         header('location:../Dashboard/admin.dash.php');
+    } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "tenant") {
+        header('location:../Dashboard/tenant.dash.php');
+    } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "") {
+        header('location:../escape_page.html');
+    } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "other") {
+        header('location:../admin_to_be.html');
     }
 }
 

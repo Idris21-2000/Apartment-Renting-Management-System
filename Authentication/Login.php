@@ -18,7 +18,7 @@ require_once '../includes/views/login_view.inc.php';
     <div class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="">Guest-view</a></li>
+            <li><a href="../Dashboard/apartments.php">Guest-view</a></li>
             <li><a href="">About us</a></li>
         </ul>
     </div>

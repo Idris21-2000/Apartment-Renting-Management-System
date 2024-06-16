@@ -10,13 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         require_once 'views/login_view.inc.php';
         require_once 'controllers/login_contr.inc.php';
 
-        $tables = [
-            'apartments',
-            'customer',
-            'images',
-            'landlords',
-        ];
-
         //error handling functions
         $errors = []; //array to store our error messages
 
@@ -44,19 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($errors) {
             $_SESSION['login_errors'] = $errors;
             header('Location:../Authentication/Login.php');
-
             die();
         }
 
-        // $new_session = session_create_id();
-        // $sessionId = $new_session . '_' . $result['id'];
-        // session_id($sessionId);
-
-        // echo $sessionId;
-        // die();
-
-        $_SESSION['user_id'] = htmlspecialchars($result["ID"]);
+        $_SESSION['user_id'] = htmlspecialchars($result["id"]);
         $_SESSION['user_type'] = htmlspecialchars($result["user_type"]);
+        $_SESSION['username'] = htmlspecialchars($result["username"]);
 
         $_SESSION['name'] = htmlspecialchars($result["fname"]);
 

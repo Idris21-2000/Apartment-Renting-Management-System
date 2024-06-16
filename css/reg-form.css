@@ -15,7 +15,6 @@ body{
 
 h1{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .reg-form input{
@@ -58,7 +57,7 @@ form{
     padding: 10px;
     background-color:rgb(81, 228, 81);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 14.5px;
     position: fixed;
 }
 
@@ -76,10 +75,32 @@ form{
     opacity: 0.7;
 }
 
+.navbar button{
+    padding: 8px 18px;
+    margin-right: 7px;
+    background: rgb(39, 39, 39);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;  
+}
+
+.navbar button:hover {
+    cursor: pointer;
+    opacity: 0.7px;
+}
+
 .navbar a{
     text-decoration: none;
     color:black;
     padding: 5px;
+}
+
+.navbar .special-li{
+    color: red;
+    float: left;
+    font-size: 12px;
 }
 
 .reg-form button{

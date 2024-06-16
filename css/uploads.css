@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.div-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-form form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    border: none;
+}
+
+.div-form button{
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    background: linear-gradient(to right,rgb(67, 67, 67), rgb(81, 228, 81));
+    box-shadow: 0 4px 8px rgb(81, 228, 81);
+}
+
+.div-form button:hover{
+    background: rgb(67, 67, 67);
+    color: white;
+    cursor: pointer;
+}
+
+.div-form input{
+    padding: 7px;
+    width: 90%;
+    border: solid;
+    margin-top: 3px;
+    border-radius: 10px;
+}
+
+form .input-style{
+    padding: 10px;
+    width: 70%;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.div-form label{
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14.5px;
+}
+
+.apartment-upload-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apartment-upload-form form input{
+    width: 300px;
+    padding: 10px;
+    margin: 3px;
+    margin-top: 5px;
+}
+
+.apartment-upload-form form textarea{
+    resize: none;
+    overflow: hidden;
+    width: 96.2%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+.apartment-upload-form form button{
+    width: 99.5%;
+    padding: 7px;
+    margin-top: 2px;
+    background-color: rgb(81, 228, 81);
+    border-radius: 3px;
+    border: none;
+}
+
+.apartment-upload-form form button:hover{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    cursor: pointer;
+}
