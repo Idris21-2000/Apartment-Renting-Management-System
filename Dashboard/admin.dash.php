@@ -26,6 +26,7 @@ require_once "../includes/config_session.inc.php";
             $tenant_counts = get_tenant_count($pdo);
             $apartment_counts = get_apartment_count($pdo);
             $results = display_photo($pdo, $_SESSION['user_id']);
+            $requests = get_request_count($pdo);
         } ?>
     </div>
     <div class="sidebar">
@@ -72,11 +73,11 @@ require_once "../includes/config_session.inc.php";
                 <p><?php echo $apartment_counts; ?></p>
             </div>
         </a>
-        <a href="">
+        <a href="../Forms/requests.php">
             <div class="box-3">
                 <h3>Requests</h3>
                 <hr><br>
-                <p>30</p>
+                <p><?php echo $requests ?></p>
             </div>
         </a>
     </div>

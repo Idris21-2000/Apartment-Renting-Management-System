@@ -26,20 +26,28 @@ require_once "../includes/config_session.inc.php";
     </div><br><br><br>
     <h1>Tenant messaging portal</h1>
     <br>
+    <?php
+    require_once "../includes/dbh.inc.php";
+    require_once "../includes/models/message_model.inc.php";
+    $messages = get_messages($pdo, $_SESSION['username']);
+    ?>
     <div class="message-form">
         <form action="../includes/message.inc.php" method="post">
             <br>
+            <?php foreach ($messages as $message) : ?>
+                <section class="text-sent">
+                    <p class="para-design">
+                        Tenant: <?php echo $message['comments'] ?>
+                    </p>
+                </section><br><br><br>
+            <?php endforeach ?>
             <section class="text-received">
                 <p class="para-design">
-                    senders massages will be here
+                    Landlord: receivers massage will be here
                 </p>
             </section>
             <br><br>
-            <section class="text-sent">
-                <p class="para-design">
-                    receivers massage will be here
-                </p>
-            </section><br><br><br>
+            </section><br>
             <textarea name="comment_section" rows="1" cols="50" required placeholder="Write your comments or complaints here...."></textarea>
             <br><br>
             <button type="submit" name="submit">Send message</button>

@@ -27,3 +27,15 @@ function get_tenants(object $pdo)
 
     return $tenants;
 }
+
+function get_landlord_request(object $pdo)
+{
+    $query = "SELECT * FROM users WHERE user_type='landlord' AND access_status IS NULL;";
+    $stmt = $pdo->prepare($query);
+
+    $stmt->execute();
+
+    $requests = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    return $requests;
+}

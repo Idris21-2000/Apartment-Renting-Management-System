@@ -55,3 +55,22 @@ function get_apartment_count(object $pdo)
         die();
     }
 }
+
+function get_request_count(object $pdo)
+{
+    try {
+        $query = "SELECT COUNT(*) AS user_count FROM users
+        WHERE user_type='landlord' AND access_status IS NULL;";
+        $stmt = $pdo->prepare($query);
+
+        $stmt->execute();
+        $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $counts = $rows['user_count'];
+
+        return $counts;
+    } catch (PDOException $e) {
+        echo "Query failed: " . $e->getMessage();
+        die();
+    }
+}

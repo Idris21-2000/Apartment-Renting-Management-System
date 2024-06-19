@@ -31,6 +31,8 @@ function return_view()
         header('location:../escape_page.html');
     } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "other") {
         header('location:../admin_to_be.html');
+    } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "landlord") {
+        header('location:../Dashboard/landlord.dash.php');
     }
 }
 

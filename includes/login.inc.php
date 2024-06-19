@@ -45,12 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = htmlspecialchars($result["username"]);
 
         $_SESSION['name'] = htmlspecialchars($result["fname"]);
+        $_SESSION['access_status'] = htmlspecialchars($result["access_status"]);
 
         $_SESSION['last_regeneration'] = time();
 
         sleep(2);
 
         return_view();
+
         $stmt = null;
         $pdo = null;
 

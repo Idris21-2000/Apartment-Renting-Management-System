@@ -5,12 +5,13 @@
 
 .card{
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-left: 10px;
 }
 
 div .image {
-  width: 22%;
+  width: 22.8%;
+  margin-left: 4px;
   border: 1px solid #ccc;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -34,9 +35,10 @@ div .image{
   padding: 5px;
 }
 
-.ap-button{
+.ap-button a{
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 .ap-button button{

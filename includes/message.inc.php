@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once "config_session.inc.php";
 
     send_message($pdo, $comment, $_SESSION['username']);
+    $messages = get_messages($pdo, $_SESSION['username']);
 
     echo "sent succesfully!";
     die();

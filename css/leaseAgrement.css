@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main-card{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: aquamarine;
+    height: 480px;
+    padding: 10px;
+    box-shadow: 0 4px 8px black;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+p{
+    padding: 3px;
+}
+
+.main-card h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.lease-card{
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    height: 400px;
+    padding: 10px;
+    border-radius: 3px;
+    
+}
+
+.description{
+    text-align: left;
+}
+
+.apart-details{
+    background-color: grey;
+    padding: 15px;
+    border-radius: 3px;
+    width: 600px;
+}
+
+.apart-attach{
+    align-self: flex-start;
+    text-align: right;
+    padding: 5px; 
+}
+
+.rent-button{
+    display: flex;
+    justify-content: center;
+}
+
+.rent-button button{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 10   px;
+    border: solid 1px grey;
+}
+
+span{
+    font-weight: bold;
+}

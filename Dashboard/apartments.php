@@ -14,6 +14,11 @@ require_once "../includes/apartments.inc.php";
 </head>
 
 <body>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <div class="navbar">
         <ul><?php
             if (isset($_SESSION['user_id'])) { ?>
@@ -27,9 +32,10 @@ require_once "../includes/apartments.inc.php";
             <li><a href="../Authentication/Reg_form.php">Register</a></li>
             <li><a href="../Authentication/Login.php">Login</a></li>
             <li><a href="">About us</a></li>
+            <li><button onclick="goBack()">Back</button></li>
         </ul>
     </div>
-    <br><br><br>
+    <br><br><br><br>
     <div class="card">
         <?php foreach ($results as $result) : ?>
             <div class="image">
@@ -41,7 +47,7 @@ require_once "../includes/apartments.inc.php";
                 </div>
                 <br>
                 <div class="ap-button">
-                    <button>Apartment details...</button>
+                    <a href="apartmentDetails.php"><button>Apartment details...</button></a>
                 </div>
             </div>
         <?php endforeach; ?>

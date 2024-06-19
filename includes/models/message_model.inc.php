@@ -13,3 +13,18 @@ function send_message(object $pdo, string $comment, string $username)
 
     $stmt->execute();
 }
+
+function get_messages(object $pdo, string $username)
+{
+    $query = "SELECT * FROM comments WHERE username = :username;";
+
+    $stmt = $pdo->prepare($query);
+
+    $stmt->bindParam(':username', $username);
+
+    $stmt->execute();
+
+    $results = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    return $results;
+}
