@@ -50,8 +50,13 @@
                     <td><?php echo $tenant['lname'] ?></td>
                     <td><?php echo $tenant['username'] ?></td>
                     <td><?php echo $tenant['address'] ?></td>
-                    <td><input type="button" value="Edit"></td>
-                    <td><input type="button" value="Delete"></td>
+                    <td><input type="button" value="Edit" class="edit"></td>
+                    <td>
+                        <form action="../includes/user_delete.inc.php" method="POST" class="button-delete">
+                            <input type="hidden" name="id" value="<?php echo $tenant['id']; ?>">
+                            <button type="submit" name="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             <?php } ?>
         </table>

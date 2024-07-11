@@ -29,25 +29,18 @@ require_once "../includes/config_session.inc.php";
     <?php
     require_once "../includes/dbh.inc.php";
     require_once "../includes/models/message_model.inc.php";
-    $messages = get_messages($pdo, $_SESSION['username']);
+    $messages = get_messages($pdo);
     ?>
     <div class="message-form">
         <form action="../includes/message.inc.php" method="post">
             <br>
             <?php foreach ($messages as $message) : ?>
-                <section class="text-sent">
+                <section class="<?php echo $message['user_type'] === 'tenant' ? 'text-sent' : 'text-received'; ?>">
                     <p class="para-design">
-                        Tenant: <?php echo $message['comments'] ?>
+                        <?php echo ucfirst($message['username']); ?>: <?php echo htmlspecialchars($message['comments']); ?>
                     </p>
                 </section><br><br><br>
-            <?php endforeach ?>
-            <section class="text-received">
-                <p class="para-design">
-                    Landlord: receivers massage will be here
-                </p>
-            </section>
-            <br><br>
-            </section><br>
+            <?php endforeach; ?>
             <textarea name="comment_section" rows="1" cols="50" required placeholder="Write your comments or complaints here...."></textarea>
             <br><br>
             <button type="submit" name="submit">Send message</button>

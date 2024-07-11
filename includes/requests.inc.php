@@ -10,6 +10,7 @@ if (isset($_POST['id'])) {
 
     $user_id = $_POST['id'];
     grant_access($pdo, $user_id);
+    header('location:../Forms/requests.php?request=granted');
 } else {
     echo "Nothing here!!";
     die();

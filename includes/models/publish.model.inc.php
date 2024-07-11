@@ -15,7 +15,17 @@ function get_apartments(object $pdo)
     return $apartmments;
 }
 
+function get_landlords(object $pdo)
+{
+    $query = "SELECT * FROM users WHERE user_type = 'landlord';";
+    $stmt = $pdo->prepare($query);
 
+    $stmt->execute();
+
+    $landlords = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    return $landlords;
+}
 
 function set_apartment_image(object $pdo, string $fileNameNew, string $apartment_name)
 {
@@ -78,4 +88,16 @@ function send_apartment_details(
     $stmt->bindParam(":description", $description);
 
     $stmt->execute();
+}
+
+function get_tenants(object $pdo, string $landlord)
+{
+    $query = "SELECT * FROM leaseagreement WHERE landlord_name = :landlord;";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(":landlord", $landlord);
+    $stmt->execute();
+
+    $results = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    return $results;
 }

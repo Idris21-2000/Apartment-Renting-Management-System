@@ -5,6 +5,7 @@
 
 .card{
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-left: 10px;
 }
@@ -54,6 +55,6 @@ div .image{
   background-color:  rgb(81, 228, 81);
 }
 
-.attchment{
+.attachment{
   display: flex;
 }

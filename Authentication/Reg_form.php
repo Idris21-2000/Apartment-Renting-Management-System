@@ -17,7 +17,7 @@ require_once "../includes/views/reg_view.inc.php";
   <div class="navbar">
     <ul>
       <li><a href="../index.html">Home</a></li>
-      <li><a href="">Guest-view</a></li>
+      <!-- <li><a href="">Guest-view</a></li> -->
       <li><a href="">About us</a></li>
     </ul>
   </div>
@@ -42,7 +42,7 @@ require_once "../includes/views/reg_view.inc.php";
       <br /><br />
       <div class="divdrop">
         <select name="user_type" class="dropbox">
-          <option value="">Registering as:</option>
+          <option>Registering as:</option>
           <option value="tenant">Tenant</option>
           <option value="landlord">Landlord</option>
           <option value="other">Other</option>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Project</title>
+    <title>All system users</title>
     <link rel="stylesheet" href="../css/crud.css">
 </head>
 
@@ -53,7 +53,12 @@
                     <td><?php echo $result['user_type'] ?></td>
                     <td><?php echo $result['address'] ?></td>
                     <td><input type="button" value="Edit"></td>
-                    <td><input type="button" value="Delete"></td>
+                    <td>
+                        <form action="../includes/user_delete.inc.php" method="POST" class="button-delete">
+                            <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
+                            <button type="submit" name="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             <?php } ?>
         </table>

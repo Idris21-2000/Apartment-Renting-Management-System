@@ -14,3 +14,15 @@ function get_apartments_details(object $pdo)
 
     return $apartmments;
 }
+
+function get_apartments(object $pdo, string $apart_id)
+{
+    $query = "SELECT * FROM apartments WHERE id = :apart_id;";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':apart_id', $apart_id);
+
+    $stmt->execute();
+
+    $apartment = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $apartment ? $apartment : [];
+}

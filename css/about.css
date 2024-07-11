@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: aliceblue;
+}
+
+header {
+    background: rgb(81, 228, 81);
+    padding: 0.1px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h1, .about-section h2 {
+    color: #333;
+}
+
+.about-section p {
+    color: #555;
+}
+
+.about-section ul li{
+    color: #555;
+}
+

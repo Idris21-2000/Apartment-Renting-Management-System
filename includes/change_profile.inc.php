@@ -32,8 +32,7 @@ if (isset($_POST['submit'])) {
                         $fileDestination = "../assets/uploads/" . $fileNameNew;
                         move_uploaded_file($fileTempName, $fileDestination);
                         change_display_photo($pdo, $fileNameNew, $userID);
-                        header("Location:../forms/change_profile.php?upload=success");
-
+                        header("Location:../forms/change_profile.php?status=success");
                         $stmt = null;
                         $pdo = null;
 

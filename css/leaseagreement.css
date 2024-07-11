@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+form h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form{
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 50px;
+    box-shadow: 0 2px 2px grey;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14.5px;
+}
+
+form span{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+form label{
+    text-wrap: wrap;
+    text-align: center;
+    margin-right: 18px;
+}
+
+.label-heads, .label-heads span{
+    font-size: 17px;
+}
+
+form .button-style{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+form .button-style button{
+    padding: 9px 25px;
+}
+
+form .button-style button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+form button{
+    float: center;
+    padding: 7px 19px;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.input-style input{
+    padding: 5px 10px;
+    border: none;
+    background-color: whitesmoke;
+    border-bottom: solid;
+}
+
+.input-style input:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: solid;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+form .signing-gap{
+    display: flex;
+    justify-content: center;
+}
+

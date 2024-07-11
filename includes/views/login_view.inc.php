@@ -30,15 +30,15 @@ function return_view()
     } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "") {
         header('location:../escape_page.html');
     } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "other") {
-        header('location:../admin_to_be.html');
+        header('location:../Dashboard_req.dash.php');
     } else if (isset($_SESSION['user_id']) && $_SESSION['user_type'] === "landlord") {
         header('location:../Dashboard/landlord.dash.php');
     }
 }
 
-function user_view()
-{
-    if (isset($_SESSION['user_id'])) {
-        echo '<h1>' . 'Welcome dear ' . $_SESSION['name'] . '</h1>';
-    }
-}
+// function user_view()
+// {
+//     if (isset($_SESSION['user_id'])) {
+//         echo '<h4>' . 'Welcome dear ' . $_SESSION['name'] . '</h4>';
+//     }
+// }

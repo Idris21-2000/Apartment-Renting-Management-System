@@ -31,7 +31,7 @@ require_once "../includes/apartments.inc.php";
             <li><a href="../index.html">Home</a></li>
             <li><a href="../Authentication/Reg_form.php">Register</a></li>
             <li><a href="../Authentication/Login.php">Login</a></li>
-            <li><a href="">About us</a></li>
+            <li><a href="../about.html">About us</a></li>
             <li><button onclick="goBack()">Back</button></li>
         </ul>
     </div>
@@ -47,7 +47,8 @@ require_once "../includes/apartments.inc.php";
                 </div>
                 <br>
                 <div class="ap-button">
-                    <a href="apartmentDetails.php"><button>Apartment details...</button></a>
+                    <a href="apartmentDetails.php?id=<?php echo htmlspecialchars($result['id']); ?>">
+                        <button>Apartment details...</button></a>
                 </div>
             </div>
         <?php endforeach; ?>

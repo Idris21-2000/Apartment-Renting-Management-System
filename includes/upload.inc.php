@@ -23,7 +23,6 @@ if (isset($_POST['submit'])) {
                 //here it should be included the id of the user uploaded this later
                 $fileNameNew = uniqid('', true) . "." . $fileActExt;
                 $fileDestination = "../assets/uploads/" . $fileNameNew;
-
                 move_uploaded_file($fileTempName, $fileDestination);
                 set_apartment_image($pdo, $fileNameNew, $apartment_name);
                 header("Location:../forms/apartment_publish.php?upload=success");

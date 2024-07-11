@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Project</title>
+    <title>All apartments</title>
     <link rel="stylesheet" href="../css/crud.css">
 </head>
 
@@ -51,7 +51,7 @@
                     <td><?php echo $result['located_at'] ?></td>
                     <td><?php echo $result['price_per_month'] ?></td>
                     <td><input type="button" value="Edit"></td>
-                    <td><input type="button" value="Delete"></td>
+                    <td><input type="button" value="Delete" class="delete"></td>
                 </tr>
             <?php } ?>
         </table>
